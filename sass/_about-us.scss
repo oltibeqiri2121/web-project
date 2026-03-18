@@ -1,0 +1,275 @@
+@use "variables" as *;
+
+// About-us page only (body.about-us)
+body.about-us .header img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+body.about-us #hero {
+  // Generated background: gradient + optional image (add p-about-us-parallax-1.jpg to assets to use)
+  background-color: #1a1a1a;
+  background-image:
+    linear-gradient(160deg, rgba(26, 26, 26, 0.92) 0%, rgba(15, 15, 15, 0.95) 50%, rgba(0, 0, 0, 0.9) 100%),
+    linear-gradient(180deg, #2d2d2d 0%, #1a1a1a 40%, #0f0f0f 100%);
+  background-image:
+    linear-gradient(160deg, rgba(26, 26, 26, 0.88) 0%, rgba(10, 10, 10, 0.94) 100%),
+    url("../assets/p-about-us-parallax-1.jpg");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+  // Subtle grid overlay (architectural feel) – optional
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+}
+
+body.about-us #hero .hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.hero-content {
+  margin-bottom: -2rem;
+  background-color: #fff;
+  padding: 4rem;
+}
+
+body.about-us .corner-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    font-weight: 300;
+    color: $color-primary;
+    letter-spacing: 0.05em;
+    font-family: $font-main;
+    text-transform: uppercase;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $color-primary;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-family: $font-main;
+    letter-spacing: 0.05em;
+  }
+}
+
+.all {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.all-text {
+  width: 50%;
+  padding: 4rem 3.5rem;
+  border: #333 1px solid;
+  border-left: none;
+
+  h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.all-img {
+  width: 50%;
+  height: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body.about-us .teams {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.team-member {
+  padding: 0.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member .team-img {
+  max-width: 90%;
+  height: 350px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+}
+
+.team-text {
+  background-color: #fff;
+  padding: 1rem;
+  position: absolute;
+  opacity: 0;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.team-member:hover .team-text {
+  bottom: 0;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.featured-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 7rem 0;
+}
+
+.featured-project img {
+  width: 91%;
+  object-fit: cover;
+}
+
+body.about-us #dessau {
+  background-image: url(https://dessau.qodeinteractive.com/wp-content/uploads/2018/05/h1-img-4.jpg);
+}
+
+body.about-us .dessau {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+body.about-us .dessau .stat-content {
+  padding: 3rem;
+
+  h1 {
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+}
+
+body.about-us .dessau .top img {
+  width: 108%;
+  height: 110%;
+}
+
+body.about-us .dessau-img {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+body.about-us .dessau .stat2 {
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    color: $color-muted;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+}
+
+body.about-us .dessau .statistic,
+body.about-us .dessau .statistic2,
+body.about-us .dessau .statistic3,
+body.about-us .dessau .statistic4 {
+  width: 100%;
+  height: 6px;
+  background-color: $color-light-gray;
+  position: relative;
+}
+
+body.about-us .dessau .statistic::before,
+body.about-us .dessau .statistic2::before,
+body.about-us .dessau .statistic3::before,
+body.about-us .dessau .statistic4::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  background-color: $color-primary;
+}
+
+body.about-us .dessau .statistic::before { width: 66%; }
+body.about-us .dessau .statistic2::before { width: 72%; }
+body.about-us .dessau .statistic3::before { width: 78%; }
+body.about-us .dessau .statistic4::before { width: 90%; }

@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+#portofolio {
+  box-shadow: 0 0 1px #555;
+  padding: 2rem 0;
+  margin: 4.1rem 0;
+}
+
+.portofolio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery-holder {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.gallery {
+  img {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  h3 {
+    margin: 0.3rem 0;
+  }
+
+  h5 {
+    margin: 0.1rem 0;
+  }
+}
+
+// Portfolio load-more (same as index but margin-top: 1rem)
+#portofolio .load-more {
+  margin-top: 1rem;
+}

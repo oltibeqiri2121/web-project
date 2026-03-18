@@ -1,0 +1,67 @@
+@use "variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+}
+
+.show-active {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-main;
+  margin: 20px 0;
+  font-weight: 300;
+  color: $color-primary;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+body {
+  color: $color-primary;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.plus {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #282828;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: #fff;
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 500;
+
+    &:hover {
+      transform: rotate(90deg);
+      color: #969595;
+    }
+  }
+}
+
+.icon-content {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}

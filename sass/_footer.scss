@@ -1,0 +1,70 @@
+@use "variables" as *;
+
+footer {
+  background-color: #1d1d1d;
+}
+
+.footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+
+  h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 0.8rem;
+  }
+}
+
+.nav-footer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+
+    li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.road {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+  margin-left: 0;
+}
+
+#footer-bottom {
+  background-color: $color-dark;
+}
+
+.footer-bottom {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+}

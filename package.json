@@ -1,0 +1,11 @@
+{
+  "name": "dessau",
+  "private": true,
+  "scripts": {
+    "build": "sass sass/main.scss css/main.css",
+    "watch": "sass sass/main.scss css/main.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

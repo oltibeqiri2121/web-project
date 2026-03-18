@@ -1,0 +1,78 @@
+@use "variables" as *;
+
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: -1px;
+  z-index: 1000;
+  border-bottom: 1px solid $color-dark;
+
+  .header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    h1 {
+      color: $color-muted;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $color-primary;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-family: $font-main;
+
+      &:hover {
+        color: $color-muted;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: $color-primary;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      font-family: $font-main;
+
+      &:hover {
+        color: $color-muted;
+      }
+    }
+  }
+}
+
+#active {
+  color: $color-muted;
+}
